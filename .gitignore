@@ -1,0 +1,23 @@
+
+
+
+
+
+node_modules/
+.env
+.DS_Store
+*.log
+
+# Backend (Node.js specific)
+backend/node_modules/
+backend/.env
+backend/dist/
+backend/.DS_Store
+backend/npm-debug.log
+
+# Frontend (React specific)
+frontend/node_modules/
+frontend/.env
+frontend/build/
+frontend/.DS_Store
+frontend/npm-debug.log

@@ -1,0 +1,50 @@
+.btn-signin {
+    position: relative;
+    height: 40px;
+    width: 150px;
+    margin: 5px;
+    padding: 8px 4px;
+    border: 1px solid #404c5d;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 16px;
+    color: transparent; /* Make the text transparent */
+    background: linear-gradient(to right, #8a2be2, #d6d6d6, #8a2be2);
+    background-size: 200% auto; /* Make the gradient larger than the button */
+    background-clip: text; /* Clip the background to the text */
+    -webkit-background-clip: text; /* For WebKit browsers */
+    /* Removed invalid property 'text-fill-color' */
+    -webkit-text-fill-color: transparent; /* For WebKit browsers */
+    animation: glow 3s linear infinite; /* Apply the glow animation */
+    /* box-shadow: inset 5px 5px 10px #212121, inset -5px -5px 10px #212121, -1px -5px 15px #41465b, 5px 5px 15px #41465b; */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+    outline: none;
+  }
+  
+  .btn-signin:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  }
+  
+  .btn-signin:active {
+    box-shadow: 1px 1px 13px #8a2be2, -1px -1px 33px #8a2be2;
+  }
+  
+  @keyframes glow {
+    0% {
+      background-position: 0% 50%; /* Start the gradient at the left */
+    }
+    50% {
+      background-position: 100% 50%; /* Move the gradient to the right */
+    }
+    100% {
+      background-position: 0% 50%; /* Move the gradient back to the left */
+    }
+  }

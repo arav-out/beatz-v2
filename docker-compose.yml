@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./backend
+    container_name: beatz-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env   # includes MONGODB_URI, CLOUDINARY, CLERK keys, etc.
+    command: npm run dev   # use nodemon for development
+
+  frontend:
+    build: ./frontend
+    container_name: beatz-frontend
+    ports:
+      - "3000:80"       # serve frontend at localhost:3000
+    env_file:
+      - ./frontend/.env.local # only VITE_ vars, baked in at build time
+    depends_on:
+      - backend
