@@ -9,3 +9,4 @@ export const useAuthToken = create<AuthTokenStore>((set) => ({
   token: null,
   setToken: (token) => set({ token }),
 }));
+export default useAuthToken;
