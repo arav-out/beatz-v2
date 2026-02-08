@@ -20,9 +20,9 @@ const LeftSidebar = () => {
     fetchAlbums();
   }, [fetchAlbums]);
 
-  const filteredAlbums = albums.filter((album) =>
-    album.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+ const filteredAlbums = (Array.isArray(albums) ? albums : []).filter((album) =>
+  album.title.toLowerCase().includes(searchQuery.toLowerCase())
+);
 
   return (
     <div className="h-full flex flex-col gap-2">
