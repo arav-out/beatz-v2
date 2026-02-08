@@ -46,7 +46,8 @@ const FriendsActivity = () => {
         ) : (
           <ScrollArea className="h-[calc(100vh-300px)]">
             <div className="space-y-4">
-              {users.map((user) => {
+              {(Array.isArray(users) ? users : []).map((user) => {
+
                 const activity = userActivities.get(user.clerkId);
                 const isPlaying = activity && activity !== "Idle";
 
