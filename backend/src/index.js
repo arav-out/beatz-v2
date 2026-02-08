@@ -20,24 +20,26 @@ import likedRoutes from './routes/liked.route.js'
 
 dotenv.config();
 
+
 const __dirname = path.resolve();
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 
 
 
 const httpServer = createServer(app);
 initializeSocket(httpServer);
+app.get("/", (req, res) => {
+  res.send("Backend running 🚀");
+});
 
 
 
-app.use(cors(
-    {
-        origin: ["http://localhost:3000", "http://192.168.1.33:3000"],
-        credentials: true,
-    }
-));
+app.use(cors({
+    origin: true,
+    credentials: true,
+}));
 app.use(express.json());
 app.use(clerkMiddleware());
 app.use(
